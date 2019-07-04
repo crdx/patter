@@ -1,0 +1,28 @@
+#!/usr/bin/env ruby
+
+require 'patter'
+include Patter
+
+require 'docopt'
+
+str = <<~EOF
+  Usage: #{File.basename $0} [options] <pattern>
+
+  Generate strings from <pattern>.
+
+  -n, --count N     Number of patterns to generate [default: 10].
+  -h, --help        Show this help.
+
+  #{Pattern.help}
+EOF
+
+begin
+  opts = Docopt::docopt(str)
+rescue Docopt::Exit => e
+  puts e.message
+  exit
+end
+
+opts['--count'].to_i.times do
+  puts Pattern.new(opts['<pattern>']).to_s
+end

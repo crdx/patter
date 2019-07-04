@@ -1,0 +1,7 @@
+#!/bin/bash
+
+set -e
+
+gem build patter.gemspec
+mkdir -p gems/
+mv -v *.gem gems/
