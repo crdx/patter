@@ -1,7 +1,2 @@
 #!/bin/bash
-
-set -e
-
-gem build patter.gemspec
-mkdir -p dist/
-mv -v *.gem dist/
+rake build
