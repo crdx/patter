@@ -1,16 +1,22 @@
 require_relative '../lib/patter'
 
 describe 'patter' do
-    it 'applies attributes correctly' do
-        provider = double(:get_source => Patter::Source.new(['potato']))
-        expect(Patter::Pattern.new('{A}', provider).to_s).to eq('potato')
-        expect(Patter::Pattern.new('{A:s}', provider).to_s).to eq('potatos')
-        expect(Patter::Pattern.new('{A:t}', provider).to_s).to eq('Potato')
-        expect(Patter::Pattern.new('{A:u}', provider).to_s).to eq('POTATO')
-        expect(Patter::Pattern.new('{A:a}', provider).to_s).to eq('PoTaTo')
+    def provider_downcase
+        double(:get_source => Patter::Source.new(['potato']))
+    end
 
-        provider = double(:get_source => Patter::Source.new(['POTATO']))
-        expect(Patter::Pattern.new('{A:l}', provider).to_s).to eq('potato')
+    def provider_upcase
+        double(:get_source => Patter::Source.new(['POTATO']))
+    end
+
+    it 'applies attributes correctly' do
+        expect(Patter::Pattern.new('{A}', provider_downcase).to_s).to eq('potato')
+        expect(Patter::Pattern.new('{A:s}', provider_downcase).to_s).to eq('potatos')
+        expect(Patter::Pattern.new('{A:t}', provider_downcase).to_s).to eq('Potato')
+        expect(Patter::Pattern.new('{A:u}', provider_downcase).to_s).to eq('POTATO')
+        expect(Patter::Pattern.new('{A:a}', provider_downcase).to_s).to eq('PoTaTo')
+
+        expect(Patter::Pattern.new('{A:l}', provider_upcase).to_s).to eq('potato')
     end
 
     it 'produces a single character for {C}, {S} and {D}' do
