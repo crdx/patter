@@ -10,12 +10,13 @@ str = <<~EOF
 
   -n, --count N     Number of patterns to generate [default: 10].
   -h, --help        Show this help.
+  -v, --version     Show version.
 
   #{Patter::Pattern.help}
 EOF
 
 begin
-  opts = Docopt::docopt(str)
+  opts = Docopt::docopt(str, { version: Patter::VERSION })
 rescue Docopt::Exit => e
   puts e.message
   exit
