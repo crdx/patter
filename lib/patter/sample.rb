@@ -8,6 +8,14 @@ module Patter
             @str = @str.send(method_symbol)
         end
 
+        def pluralize
+            @str = Inflector.pluralize(@str)
+        end
+
+        def titleize
+            @str = @str[0].upcase + @str[1..]
+        end
+
         def altcase
             @str = @str.chars.each_with_index.map do |char, i|
                 if i % 2 == 0 then

@@ -11,7 +11,6 @@ Gem::Specification.new do |spec|
     spec.files    = Dir['{words,lib}/**/*']
     spec.executables = ['patter']
 
-    spec.add_runtime_dependency 'activesupport', '~> 5.2.3'
     spec.add_runtime_dependency 'docopt', '~> 0.6.1'
 
     spec.add_development_dependency 'rspec', '~> 3.8'
