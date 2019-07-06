@@ -16,14 +16,14 @@ module Patter
     }
 
     class Pattern
-        def initialize(pattern)
+        def initialize(pattern, source_provider = SourceProvider.instance)
             @pattern = pattern
         end
 
         def to_s
             @pattern.gsub(/\{([#{TAGS.keys.join}])(:(\w+))?\}/) do
                 tag, modifiers = $1, $3
-                source = SourceProvider.instance.get_source(TAGS[tag])
+                source = @source_provider.get_source(TAGS[tag])
 
                 next source.get_sample if !modifiers
 
