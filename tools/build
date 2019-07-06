@@ -3,5 +3,5 @@
 set -e
 
 gem build patter.gemspec
-mkdir -p gems/
-mv -v *.gem gems/
+mkdir -p dist/
+mv -v *.gem dist/
