@@ -1,6 +1,8 @@
 # patter
 
-**patter** is a ruby gem for generating patterns.
+**patter** is a ruby gem for generating strings from patterns.
+
+A pattern is a sequence of tags and modifiers that define the format of the output. For more on patterns see the [Command-line](#command-line) help output below.
 
 ## Installation
 

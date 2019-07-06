@@ -1,6 +1,6 @@
 Gem::Specification.new do |spec|
   spec.homepage = 'https://github.com/crdx/patter'
-  spec.summary  = 'Patterns.'
+  spec.summary  = 'Generate strings from patterns.'
   spec.name     = 'patter'
   spec.version  = '1.0.5'
   spec.author   = 'crdx'
