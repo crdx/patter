@@ -1,2 +1,2 @@
 #!/bin/bash
-ruby -Ilib bin/patter
+bundle exec ruby -Ilib bin/patter "$@"
