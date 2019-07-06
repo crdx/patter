@@ -18,4 +18,8 @@ describe 'patter' do
         expect(Patter::Pattern.new('{S}').to_s.length).to eq(1)
         expect(Patter::Pattern.new('{D}').to_s.length).to eq(1)
     end
+
+    it 'produces repeating characters' do
+        expect(Patter::Pattern.new('{C:5}').to_s.length).to eq(5)
+    end
 end
