@@ -13,6 +13,4 @@ Gem::Specification.new do |spec|
 
   spec.add_runtime_dependency 'activesupport', '~> 5.2.3'
   spec.add_runtime_dependency 'docopt', '~> 0.6.1'
-
-  spec.add_development_dependency 'bundler', '~> 2.0'
 end
