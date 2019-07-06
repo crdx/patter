@@ -2,7 +2,7 @@ module Patter
     class SourceProvider
         include Singleton
 
-        def get_source type
+        def get_source(type)
             Source.new(send(type))
         end
 
@@ -12,7 +12,7 @@ module Patter
             __dir__ + "/../../"
         end
 
-        def get_wordlist type
+        def get_wordlist(type)
             File.read(gem_root + "/words/#{type}.txt").split
         end
 

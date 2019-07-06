@@ -1,16 +1,20 @@
 module Patter
     class Sample
-        def initialize str
+        def initialize(str)
             @str = str
         end
 
-        def method_missing s
-            @str = @str.send s
+        def method_missing(method_symbol)
+            @str = @str.send(method_symbol)
         end
 
         def altcase
-            @str = @str.chars.each_with_index.map do |c, i|
-                if i % 2 == 0 then c.upcase else c.downcase end
+            @str = @str.chars.each_with_index.map do |char, i|
+                if i % 2 == 0 then
+                    char.upcase
+                else
+                    char.downcase
+                end
             end.join
         end
 

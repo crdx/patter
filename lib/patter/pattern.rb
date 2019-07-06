@@ -16,7 +16,7 @@ module Patter
     }
 
     class Pattern
-        def initialize pattern
+        def initialize(pattern)
             @pattern = pattern
         end
 
