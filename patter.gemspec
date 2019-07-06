@@ -1,16 +1,16 @@
 require_relative 'lib/patter/version'
 
 Gem::Specification.new do |spec|
-  spec.homepage = 'https://github.com/crdx/patter'
-  spec.summary  = 'Generate strings from patterns.'
-  spec.name     = 'patter'
-  spec.version  = Patter::VERSION
-  spec.author   = 'crdx'
-  spec.license  = 'MIT'
+    spec.homepage = 'https://github.com/crdx/patter'
+    spec.summary  = 'Generate strings from patterns.'
+    spec.name     = 'patter'
+    spec.version  = Patter::VERSION
+    spec.author   = 'crdx'
+    spec.license  = 'MIT'
 
-  spec.files    = Dir['{words,lib}/**/*']
-  spec.executables = ['patter']
+    spec.files    = Dir['{words,lib}/**/*']
+    spec.executables = ['patter']
 
-  spec.add_runtime_dependency 'activesupport', '~> 5.2.3'
-  spec.add_runtime_dependency 'docopt', '~> 0.6.1'
+    spec.add_runtime_dependency 'activesupport', '~> 5.2.3'
+    spec.add_runtime_dependency 'docopt', '~> 0.6.1'
 end
