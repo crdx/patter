@@ -1,7 +1,7 @@
 module Patter
     class Source < Array
         def get_samples(n)
-            sample(n).map { |str| Sample.new(str) }
+            sample(n).map { |sample| Sample.new(sample) }
         end
 
         def get_sample

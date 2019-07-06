@@ -33,13 +33,18 @@ module Patter
                 n = 1
 
                 modifiers.split(re).reject(&:empty?).each do |modifier|
-                    n = $1.to_i if modifier =~ /([0-9]+)/
-                    chain << MODIFIERS[modifier] if MODIFIERS[modifier]
+                    if modifier =~ /([0-9]+)/
+                        n = $1.to_i
+                    end
+
+                    if MODIFIERS[modifier]
+                        chain << MODIFIERS[modifier]
+                    end
                 end
 
-                samples = source.get_samples(n)
-                chain.each { |tran| samples.each &tran }
-                samples.join
+                source.get_samples(n).map do |sample|
+                    sample.transform(chain)
+                end.join
             end
         end
 
