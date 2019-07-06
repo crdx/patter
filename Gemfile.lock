@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    patter (1.0.8)
+    patter (1.0.9)
       activesupport (~> 5.2.3)
       docopt (~> 0.6.1)
 
