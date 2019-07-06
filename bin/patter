@@ -4,24 +4,24 @@ require 'patter'
 require 'docopt'
 
 str = <<~EOF
-  Usage: #{File.basename $0} [options] <pattern>
+    Usage: #{File.basename $0} [options] <pattern>
 
-  Generate strings from <pattern>.
+    Generate strings from <pattern>.
 
-  -n, --count N     Number of patterns to generate [default: 10].
-  -h, --help        Show this help.
-  -v, --version     Show version.
+    -n, --count N     Number of patterns to generate [default: 10].
+    -h, --help        Show this help.
+    -v, --version     Show version.
 
-  #{Patter::Pattern.help}
+    #{Patter::Pattern.help}
 EOF
 
 begin
-  opts = Docopt::docopt(str, { version: Patter::VERSION })
+    opts = Docopt::docopt(str, { version: Patter::VERSION })
 rescue Docopt::Exit => e
-  puts e.message
-  exit
+    puts e.message
+    exit
 end
 
 opts['--count'].to_i.times do
-  puts Patter::Pattern.new(opts['<pattern>']).to_s
+    puts Patter::Pattern.new(opts['<pattern>']).to_s
 end
