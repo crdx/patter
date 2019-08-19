@@ -10,7 +10,7 @@ module Patter
 
         def altcase
             self.class.new(chars.each_with_index.map do |char, i|
-                if i % 2 == 0 then
+                if i.even?
                     char.upcase
                 else
                     char.downcase
