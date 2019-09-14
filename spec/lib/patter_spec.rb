@@ -1,4 +1,4 @@
-require_relative '../lib/patter'
+require_relative '../../lib/patter'
 
 describe 'patter' do
     def provider_downcase
