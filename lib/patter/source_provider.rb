@@ -8,12 +8,8 @@ module Patter
 
         private
 
-        def gem_root
-            __dir__ + "/../../"
-        end
-
         def get_wordlist(type)
-            File.read(gem_root + "/words/#{type}.txt").split
+            File.read(Patter.root + "/words/#{type}.txt").split
         end
 
         def chars
