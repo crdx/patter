@@ -47,33 +47,5 @@ module Patter
                 end.join
             end
         end
-
-        def self.help
-            return <<~EOF
-                TAGS
-
-                    {A} adjective       {N} noun
-                    {S} symbol          {D} digit
-                    {C} character
-
-                MODIFIERS
-
-                    s: plural           t: titlecase
-                    u: uppercase        l: lowercase
-                    a: AlTeRnAtE case
-                    <number>: repeat <number> times
-
-                Apply modifiers using a colon after the tag name.
-
-                EXAMPLES
-
-                    Ten random uppercase letters: {C:10u}
-                    Three camelcase nouns:        {N:3t}
-                    Plural, titlecase noun:       {N:ts}
-                    Uppercase adjective:          {A:u}
-                    Five random digits:           {D:5}
-                    A username:                   {A}_{N}
-            EOF
-        end
     end
 end

@@ -1,27 +1,49 @@
 #!/usr/bin/env ruby
+require_relative '../lib/patter'
+include Patter
 
-require 'patter'
-require 'docopt'
+class Main
+    def self.run(opts)
+        opts['--count'].to_i.times do
+            puts Pattern.new(opts['<pattern>']).to_s
+        end
+    end
+end
 
-str = <<~EOF
-    Usage: #{File.basename $0} [options] <pattern>
+docs = <<~EOF
+    #{'Usage:'.bold}
+        #{File.basename $0} [options] <pattern>
 
-    Generate strings from <pattern>.
+    #{'Options:'.bold}
+        -n, --count N       Number of patterns to generate [default: 10]
+        -v, --version       Show version
+        -h, --help          Show this help
 
-    -n, --count N     Number of patterns to generate [default: 10].
-    -h, --help        Show this help.
-    -v, --version     Show version.
+    #{'Tags:'.bold}
+        {A} adjective       {N} noun
+        {S} symbol          {D} digit
+        {C} character
 
-    #{Patter::Pattern.help}
+    #{'Modifiers:'.bold}
+        s: plural           t: titlecase
+        u: uppercase        l: lowercase
+        a: AlTeRnAtE case
+        <number>: repeat <number> times
+
+    Apply modifiers using a colon after the tag name.
+
+    #{'Examples:'.bold}
+        Ten random uppercase letters: {C:10u}
+        Three camelcase nouns:        {N:3t}
+        Plural, titlecase noun:       {N:ts}
+        Uppercase adjective:          {A:u}
+        Five random digits:           {D:5}
+        A username:                   {A}_{N}
 EOF
 
 begin
-    opts = Docopt::docopt(str, { version: Patter::VERSION })
+    Main.run(Docopt::docopt(docs, version: VERSION))
 rescue Docopt::Exit => e
     puts e.message
-    exit
-end
-
-opts['--count'].to_i.times do
-    puts Patter::Pattern.new(opts['<pattern>']).to_s
+    exit 1
 end

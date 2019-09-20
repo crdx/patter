@@ -9,7 +9,7 @@ module Patter
         private
 
         def get_wordlist(type)
-            File.read(Patter.root + "/words/#{type}.txt").split
+            File.read(Patter.root_dir + "/words/#{type}.txt").split
         end
 
         def chars
