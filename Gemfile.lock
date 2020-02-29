@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    patter (1.0.12)
+    patter (1.0.13)
       colorize (~> 0.8.1)
       docopt (~> 0.6.1)
 
@@ -43,4 +43,4 @@ DEPENDENCIES
   simplecov (~> 0.17.0)
 
 BUNDLED WITH
-   2.0.2
+   2.1.4
