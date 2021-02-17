@@ -2,7 +2,7 @@
 
 **patter** is a ruby gem that generates strings from patterns.
 
-A pattern is a sequence of tags and modifiers that defines the format of the output. For more on patterns see the [Command-line](#command-line-usage) help output below.
+A pattern is a sequence of tags and modifiers that defines the format of the output. For more on patterns see the [CLI](#cli) help output below.
 
 ## Installation
 
