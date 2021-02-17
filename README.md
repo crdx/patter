@@ -9,7 +9,7 @@ A pattern is a sequence of tags and modifiers that defines the format of the out
 Build and install locally:
 
 ```
-tools/install
+just install
 ```
 
 Alternatively install from [rubygems](https://rubygems.org/gems/patter):
@@ -69,10 +69,8 @@ puts Patter::Pattern.new('{A}')
 
 ## Unit tests
 
-Run tests:
-
 ```
-tools/test
+just test
 ```
 
 ## Bugs or contributions
