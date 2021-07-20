@@ -2,7 +2,7 @@ require_relative 'lib/patter/version'
 
 Gem::Specification.new do |spec|
     spec.homepage = 'https://github.com/crdx/patter'
-    spec.summary  = 'Generate strings from patterns.'
+    spec.summary  = 'pattern generator'
     spec.name     = 'patter'
     spec.version  = Patter::VERSION
     spec.author   = 'crdx'
