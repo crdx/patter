@@ -75,7 +75,7 @@ just test
 
 ## Bugs or contributions
 
-Open an [issue](http://github.com/crdx/patter/issues) or send a [pull request](http://github.com/crdx/patter/pulls).
+Open an [issue](https://github.com/crdx/patter/issues) or send a [pull request](https://github.com/crdx/patter/pulls).
 
 ## Licence
 
