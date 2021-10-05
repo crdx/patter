@@ -10,21 +10,22 @@ class Main
     end
 end
 
-docs = <<~EOF
-    #{'Usage:'.bold}
+usage = <<~EOF
+    Usage:
         #{File.basename $0} [options] <pattern>
+        #{File.basename $0} ( --version | --help )
 
-    #{'Options:'.bold}
+    Options:
         -n, --count N       Number of patterns to generate [default: 10]
         -v, --version       Show version
         -h, --help          Show this help
 
-    #{'Tags:'.bold}
+    Tags:
         {A} adjective       {N} noun
         {S} symbol          {D} digit
         {C} character
 
-    #{'Modifiers:'.bold}
+    Modifiers:
         s: plural           t: titlecase
         u: uppercase        l: lowercase
         a: AlTeRnAtE case
@@ -32,7 +33,7 @@ docs = <<~EOF
 
     Apply modifiers using a colon after the tag name.
 
-    #{'Examples:'.bold}
+    Examples:
         Ten random uppercase letters: {C:10u}
         Three camelcase nouns:        {N:3t}
         Plural, titlecase noun:       {N:ts}
@@ -42,8 +43,8 @@ docs = <<~EOF
 EOF
 
 begin
-    Main.run(Docopt::docopt(docs, version: VERSION))
+    Main.run(Docopt::docopt(usage))
 rescue Docopt::Exit => e
-    puts e.message
+    puts usage
     exit 1
 end
