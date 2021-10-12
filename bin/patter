@@ -4,6 +4,11 @@ include Patter
 
 class Main
     def self.run(opts)
+        if opts['--version']
+            puts VERSION
+            exit
+        end
+
         opts['--count'].to_i.times do
             puts Pattern.new(opts['<pattern>']).to_s
         end
