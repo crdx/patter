@@ -2,11 +2,11 @@ require_relative '../../lib/patter'
 
 describe 'patter' do
     def provider_downcase
-        double(:get_source => Source.new(['cheese']))
+        double(get_source: Source.new(['cheese']))
     end
 
     def provider_upcase
-        double(:get_source => Source.new(['CHEESE']))
+        double(get_source: Source.new(['CHEESE']))
     end
 
     it 'applies attributes correctly' do

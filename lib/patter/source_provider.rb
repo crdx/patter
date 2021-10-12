@@ -13,7 +13,7 @@ module Patter
         end
 
         def chars
-            'abcdefghijklmnopqrstuvwxyz'.split('').shuffle
+            'abcdefghijklmnopqrstuvwxyz'.chars.shuffle
         end
 
         def adjectives
@@ -25,11 +25,11 @@ module Patter
         end
 
         def symbols
-            '!#$%&()*+,-=./:;<?>@[\]^_'.split('')
+            '!#$%&()*+,-=./:;<?>@[\]^_'.chars
         end
 
         def digits
-            '123456789'.split('')
+            '123456789'.chars
         end
     end
 end

@@ -23,7 +23,8 @@ module Patter
 
         def to_s
             @pattern.gsub(/\{([#{TAGS.keys.join}])(:(\w+))?\}/) do
-                tag, modifiers = $1, $3
+                tag = $1
+                modifiers = $3
                 source = @source_provider.get_source(TAGS[tag])
 
                 next source.get_sample if !modifiers

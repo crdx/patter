@@ -12,8 +12,8 @@ end
 
 usage = <<~EOF
     Usage:
-        #{File.basename $0} [options] <pattern>
-        #{File.basename $0} ( --version | --help )
+        #{File.basename($0)} [options] <pattern>
+        #{File.basename($0)} ( --version | --help )
 
     Options:
         -n, --count N       Number of patterns to generate [default: 10]
@@ -43,8 +43,8 @@ usage = <<~EOF
 EOF
 
 begin
-    Main.run(Docopt::docopt(usage))
-rescue Docopt::Exit => e
+    Main.run(Docopt.docopt(usage))
+rescue Docopt::Exit
     puts usage
     exit 2
 end
