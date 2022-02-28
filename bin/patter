@@ -15,10 +15,12 @@ class Main
     end
 end
 
+PROGRAM_NAME = File.basename($PROGRAM_NAME)
+
 usage = <<~EOF
     Usage:
-        #{File.basename($0)} [options] <pattern>
-        #{File.basename($0)} ( --version | --help )
+        #{PROGRAM_NAME} [options] <pattern>
+        #{PROGRAM_NAME} ( --version | --help )
 
     Options:
         -n, --count N       Number of patterns to generate [default: 10]
