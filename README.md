@@ -73,7 +73,7 @@ puts Patter::Pattern.new('{A}')
 just test
 ```
 
-## Bugs or contributions
+## Contributions
 
 Open an [issue](https://github.com/crdx/patter/issues) or send a [pull request](https://github.com/crdx/patter/pulls).
 
