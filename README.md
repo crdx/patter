@@ -23,40 +23,37 @@ gem install patter
 ### CLI
 
 ```
-$ patter --help
-
-Usage: patter [options] <pattern>
+Usage:
+    patter [options] <pattern>
+    patter ( --version | --help )
 
 Generate strings from <pattern>.
 
--n, --count N     Number of patterns to generate [default: 10].
--h, --help        Show this help.
--v, --version     Show version.
+Options:
+    -n, --count N       Number of patterns to generate [default: 10]
+    -v, --version       Show version
+    -h, --help          Show help
 
-TAGS
+Tags:
+    {A} adjective       {N} noun
+    {S} symbol          {D} digit
+    {C} character
 
-  {A} adjective       {N} noun
-  {S} symbol          {D} digit
-  {C} character
-
-MODIFIERS
-
-  s: plural           t: titlecase
-  u: uppercase        l: lowercase
-  a: AlTeRnAtE case
-  <number>: repeat <number> times
+Modifiers:
+    s: plural           t: titlecase
+    u: uppercase        l: lowercase
+    a: AlTeRnAtE case
+    <number>: repeat <number> times
 
 Apply modifiers using a colon after the tag name.
 
-EXAMPLES
-
-  Ten random uppercase letters: {C:10u}
-  Three camelcase nouns:        {N:3t}
-  Plural, titlecase noun:       {N:ts}
-  Uppercase adjective:          {A:u}
-  Five random digits:           {D:5}
-  A username:                   {A}_{N}
-
+Examples:
+    Ten random uppercase letters: {C:10u}
+    Three camelcase nouns:        {N:3t}
+    Plural, titlecase noun:       {N:ts}
+    Uppercase adjective:          {A:u}
+    Five random digits:           {D:5}
+    A username:                   {A}_{N}
 ```
 
 ### API

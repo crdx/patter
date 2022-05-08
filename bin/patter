@@ -22,10 +22,12 @@ usage = <<~EOF
         #{PROGRAM_NAME} [options] <pattern>
         #{PROGRAM_NAME} ( --version | --help )
 
+    Generate strings from <pattern>.
+
     Options:
         -n, --count N       Number of patterns to generate [default: 10]
         -v, --version       Show version
-        -h, --help          Show this help
+        -h, --help          Show help
 
     Tags:
         {A} adjective       {N} noun
