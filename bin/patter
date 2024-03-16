@@ -10,7 +10,7 @@ class Main
         end
 
         opts['--count'].to_i.times do
-            puts Pattern.new(opts['<pattern>']).to_s
+            puts Pattern.new(opts['<pattern>'])
         end
     end
 end

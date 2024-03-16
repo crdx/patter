@@ -4,6 +4,7 @@ PATH
     patter (1.0.20)
       colorize (~> 0.8.1)
       docopt (~> 0.6.1)
+      json (~> 2.7)
 
 GEM
   remote: https://rubygems.org/
@@ -12,6 +13,7 @@ GEM
     diff-lcs (1.4.4)
     docile (1.4.0)
     docopt (0.6.1)
+    json (2.7.1)
     rake (13.0.6)
     rspec (3.10.0)
       rspec-core (~> 3.10.0)
