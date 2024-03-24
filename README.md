@@ -25,14 +25,13 @@ gem install patter
 ```
 Usage:
     patter [options] <pattern>
-    patter ( --version | --help )
+    patter --version
 
 Generate strings from <pattern>.
 
 Options:
     -n, --count N       Number of patterns to generate [default: 10]
     -v, --version       Show version
-    -h, --help          Show help
 
 Tags:
     {A} adjective       {N} noun
