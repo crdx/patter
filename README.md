@@ -6,13 +6,7 @@ A pattern is a sequence of tags and modifiers that defines the format of the out
 
 ## Installation
 
-Build and install locally:
-
-```
-just install
-```
-
-Alternatively install from [rubygems](https://rubygems.org/gems/patter):
+Install from [rubygems](https://rubygems.org/gems/patter).
 
 ```
 gem install patter
