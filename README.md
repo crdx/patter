@@ -12,9 +12,7 @@ Install from [rubygems](https://rubygems.org/gems/patter).
 gem install patter
 ```
 
-## Usage
-
-### CLI
+## CLI
 
 ```
 Usage:
@@ -49,7 +47,7 @@ Examples:
     A username:                   {A}_{N}
 ```
 
-### API
+## API
 
 ```rb
 require 'patter'
