@@ -2,7 +2,7 @@
 
 **patter** is a ruby gem that generates strings from patterns.
 
-A pattern is a sequence of tags and modifiers that defines the format of the output. For more on patterns see the [CLI](#cli) help output below.
+A pattern is a sequence of tags and modifiers that defines the format of the output. For more on patterns see the [Usage](#usage) help output below.
 
 ## Installation
 
@@ -12,7 +12,7 @@ Install from [rubygems](https://rubygems.org/gems/patter).
 gem install patter
 ```
 
-## CLI
+## Usage
 
 ```
 Usage:
